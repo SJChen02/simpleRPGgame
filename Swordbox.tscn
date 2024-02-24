@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Swordbox.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.0625
+height = 15.5
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 11.5021
+height = 10.4968
+
+[node name="Swordbox" type="Area2D"]
+position = Vector2( -0.200985, 6.99715 )
+scale = Vector2( 0.92089, 0.979711 )
+gravity_point = true
+collision_layer = 9
+collision_mask = 9
+script = ExtResource( 1 )
+
+[node name="2" type="CollisionShape2D" parent="."]
+position = Vector2( -1.12762, -0.145822 )
+rotation = 1.5708
+scale = Vector2( 2.32212, 2 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="1" type="CollisionShape2D" parent="."]
+position = Vector2( -0.473678, 6.63409 )
+rotation = 1.5708
+shape = SubResource( 2 )
+disabled = true
